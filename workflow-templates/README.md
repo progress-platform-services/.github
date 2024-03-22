@@ -25,7 +25,7 @@ Artifacts and binaries will be on the Releases tab for a given module or applica
 - ci-cli-go-main-dispatch
 - ci-cli-go-main-stub
 
-- ci-helm-publish
+- ci-helm-publish - needs checkov
 - cd-helm-eks-chef-platform-dev
 
 - ci-service-go-main

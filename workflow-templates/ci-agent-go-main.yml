@@ -1,0 +1,36 @@
+name: CI workflow for GoLang CLIs
+
+# include the stub in your repo
+
+on:
+  workflow_dispatch:
+    inputs:
+      foo:
+        type: string
+        default: 'bar'
+  workflow_call:
+    inputs:
+      foo:
+        type: string
+        default: 'bar'
+
+jobs:
+  example_matrix:
+    strategy:
+      matrix:
+        # matrix strategy is described at https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs
+        # free runner types are https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners
+        # from macos-latest, windows-latest, ubuntu-latest, ubuntu-20.04, ubuntu-18.04, ubuntu-16.04, windows-2019, windows-2016
+        # included software packages are at https://github.com/actions/runner-images#available-images 
+        os: [ubuntu-latest, windows-latest]
+  repo-job:
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: print param
+        run: echo "${{ inputs.foo }}"
+      - name: print OS
+        run: echo "${{ matrix.os }}"
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo Hello from Octo Organization
