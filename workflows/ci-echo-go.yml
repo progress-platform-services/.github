@@ -7,9 +7,14 @@ on:
       message:
         required: true
         type: string
-
+  workflow_dispatch:
+    inputs:
+      message:
+        required: true
+        type: string
 jobs:
   reusable_echo:
+    name: echo message back
     runs-on: ubuntu-latest
     steps:
       - name: echo
