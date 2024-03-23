@@ -16,7 +16,7 @@ All repositories in this organization are "internal" which means they are shared
 Internal repositories do not need a LICENSE.txt and are assumed to be proprietary property of Progress.  That is, copyright based on the year of initial development with all rights reserved.  If a repository is to be made open source or have a specific license applied for source code sharing (typically Progress uses Apache v2.0 - https://www.apache.org/licenses/LICENSE-2.0.txt), please prepare to move the code to another organization like inspec and consult your legal support for markings.
 
 ## Common CI/CD build pipelines
-Each repository will use GitHub Actions to perform continuous integration (CI) tasks -- creating a binary, unit testing, static security checks, building bills of material (SBOM), etc. -- and some repositories may include continuous deployment of applcations to hosted environments.
+Each repository will use GitHub Actions to perform continuous integration (CI) tasks -- creating a binary, unit testing, static security checks, building bills of material (SBOM), etc. -- and some repositories may include continuous deployment of applcations to hosted environments.  These will be available as template CI and CD actions on the main Actions page (templates folder in this repo).
 
 Artifacts and binaries will be on the Releases tab for a given module or application repository. 
 
@@ -24,7 +24,7 @@ Artifacts and binaries will be on the Releases tab for a given module or applica
 - **code-gen** provides a GoLang-based code scaffold for REST-based API services
 - **open-api-specifications** a repository of Chef Courier APIs used to generate browsable documentation
 - **helm** CD scripts to deploy services for Chef Courier and other products
-- **.github** provides common GitHib Actions for CI and CD, for API services, command-line interfaces (CLI), Courier Agents, and jobs.
+- **common-github-actions** provides common GitHib Actions for CI and CD, for API services, command-line interfaces (CLI), Courier Agents, and jobs.
 - **scripts** provide general purpose bash/sh and PowerShell scripts for common repository operations
 
 ## References
