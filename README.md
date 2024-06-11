@@ -1,0 +1,1 @@
+This repository contains the readme and template projects for the organization (progress-shared-services)
