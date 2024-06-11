@@ -18,6 +18,8 @@ Internal repositories do not need a LICENSE.txt and are assumed to be proprietar
 ## Common CI/CD build pipelines
 Each repository will use GitHub Actions to perform continuous integration (CI) tasks -- creating a binary, unit testing, static security checks, building bills of material (SBOM), etc. -- and some repositories may include continuous deployment of applcations to hosted environments.  These will be available as template CI and CD actions on the main Actions page (templates folder in this repo).
 
+CI/CD stubs which go in a managed repository and the called, common GitHub Actions are in https://github.com/progress-shared-services/common-github-actions 
+
 Artifacts and binaries will be on the Releases tab for a given module or application repository. 
 
 ## Specific repositories of interest
